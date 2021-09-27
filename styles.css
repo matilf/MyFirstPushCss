@@ -124,6 +124,10 @@ margin: 8px 0px 0px 20px;
       
 }
 
+.banner2 {
+    display:none
+}
+
 /**movimiento estrellas**/
 
 @keyframes backBanner{

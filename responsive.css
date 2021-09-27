@@ -107,6 +107,7 @@ width: 65%;
     }
     .card {
         height: auto;
+        margin-left: 85px;
     }
 
     .card .category {
@@ -116,6 +117,7 @@ width: 65%;
     .card .description {
         display: none;
     }
+    
 }
 
 @media (max-width:724px) {
@@ -124,12 +126,17 @@ width: 65%;
         height: 135px;
         padding-top: 10px;
     }
+    
+        
+    }
     #menu{
         clear: both;
         float: none;
         width: 440px;
         margin: 0 auto;
-    }
+        margin-left: -20px;
+    } 
+    
 
     .logo {
       
@@ -138,11 +145,26 @@ width: 65%;
        
     margin:0px auto;
     }
-    .banner h1 {
-        font-size: 25px;
-        text-align:left;
+    .banner {
+        display: none;
     }
-}
+
+    .banner2{
+    display: flex;
+    width: 95.6%;
+    height: 100px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    background-image: url(img/bakbaner.png);
+    align-items: center;
+    }
+
+    .text-banner{
+        color:white;
+      text-align: center;
+      margin-left: 30px;
+    }
+
 
 @media (max-width: 660px ) {
     .banner h1 {
