@@ -1,0 +1,654 @@
+/*FUENTES*/
+@font-face {
+    font-family: "Trebuchet MS";
+    src: url(fonts/TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url(fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Web Symbols;
+    src: url("fonts/websymbols-regular-webfont.svg#WegSymbolsRegular") format("svg"),
+         url("fonts/websymbols-regular-webfont.eot"),
+         url("fonts/websymbols-regular-webfont.eot?#iefix") format("eot"),
+         url("fonts/websymbols-regular-webfon.woff") format("woff"),
+         url("fonts/websymbols-regular-webfon.ttf") format("truetype");
+         font-weight: normal;
+         font-style: normal;
+}
+ 
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+ 
+body {
+    background-image: url(img/pattern.png);
+}
+
+.wrap {
+    width: 1200px; /**compartimento para el titulo**/
+    margin: 0px auto; /**para centrar**/
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+
+/**CABECERA**/
+
+#header {
+    width:100%;
+    height: 70px; /*altura*/
+    background-color: black;
+    color: white;
+    font-family: "bebasneue";
+}
+
+.logo {
+    float: left;
+    width: 200px;
+    background-color: #37bcf9;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+margin: 8px 0px 0px 20px;
+}
+
+
+.logo h3 {
+    font-size: 40px;
+    display: block;
+    float: right;
+    margin-right: 65px;
+    margin-top: 5px;
+}
+
+.material-icons {
+    display:  block;
+    float: left;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+#menu {
+
+    float: right;
+ margin-right: 15%;   
+ height: 70px;
+ background: transparent;
+}
+
+#menu ul li {
+    font-size: 24px;
+    display: inline-block;
+    margin: 5px 20px 0px 20px ;
+    letter-spacing: 1px;
+    line-height: 75px;
+}
+
+#menu ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    color: #37bcf9;
+    transform: scale(1.2, 1.2);
+}
+
+/**banner**/
+
+.banner {
+    width: 95.6%;
+    height: 100px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    background-image: url(img/bakbaner.png);
+    background-position: -200px -200px;
+    margin: 20px auto;
+    animation: backBanner 10s linear;
+    overflow: hidden;
+      
+}
+
+/**movimiento estrellas**/
+
+@keyframes backBanner{
+    0% {
+background-position: 0px 0px;
+    }
+    100% {
+background-position: -200px -200px;
+    }
+}
+
+.banner h1 {
+    display: block;
+    text-transform: uppercase;
+    width: 850px;
+    color: white;
+    font-family: "bebasneue";
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin: 20px auto; /*para centrar*/
+    overflow: hidden;
+    animation: showText 5s linear;
+    text-align: center;
+}
+
+@keyframes showText {
+    0% {
+transform: translateX(0%) scale(5,5) ;
+opacity: 1;
+    }
+    50% {
+        transform: translateX(600%) scale(5,5)  ;
+        opacity: 1;
+    } 
+    75% {
+        transform: translateX(-600%) scale(5,5) ;
+        opacity: 0;
+        text-shadow: none;
+        color: transparent;
+    }
+    100% {
+        transform: translateX(0%)  ;
+        opacity: 1;
+        text-shadow: 2px 2px 1px black;
+        color: white;
+    }
+}
+
+/**tarjetas**/
+
+.card {
+ 
+    width: 204px;
+    height: 305px;
+    border: 1px solid #cccccc;
+    float: left;
+    overflow: hidden;
+    margin: 40px 17px 20px 17px;
+    background: white;
+    cursor: pointer;
+    transition: all 300ms;
+
+}
+
+
+.card:hover {
+background: black;
+}
+
+.card:hover .material-icons {
+    font-size: 70px;
+    color: #37bcf9;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon {
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.card .material-icons {
+    display: block;
+    width: 100%;
+    height: 130px;
+    font-size: 50px;
+    line-height: 130px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.card .category {
+    
+     margin: 20px 0px 0px 0px;
+    font-family: "trebuchetms";
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: #00538c;
+transition: all 300ms;
+ 
+}
+
+.card:hover .category {
+color: white;
+animation: showCategory 400ms linear;
+}
+
+@keyframes showCategory {
+    from {
+        transform: translateY(-300%);
+        color: black;
+    }
+    to {
+        transform: translateY(0%);
+        color: white;
+    }
+}
+
+.card .description {
+    text-align: center;
+    color: #1b3546;
+    font-family: "trebuchetms";
+    transition: all 300ms;
+}
+
+.card:hover .description {
+    color: white;
+    animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription {
+    from {
+        transform: translateX(-300%);
+        color: black;
+
+}
+to {
+    transform: translateX(0%);
+    color: white;
+}
+}
+
+/**barra lateral**/
+
+#lateral {
+    width: 300px;
+    min-height: 1200px;
+    font-family: "trebuchetms";
+    float: right;
+    margin: 20px;
+}
+
+aside h3 {
+    display: block;
+    width: auto;
+    height: 45px;
+    line-height: 15px;
+    background-image: url(img/pxgray.png);
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f;
+    font-size: 30px;
+    font-family: "bebasneue";
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    line-height: 45px; /**p centrar verticalmente**/
+    
+}
+
+aside h3:first-child {
+    margin-top: 0px;
+
+}
+
+.search {
+    width:90% ;
+    height: 30px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+#lateral input[type="text"]{
+    width: 85%;
+    height: 15px;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: black;
+}
+
+#lateral input[type="button"],
+#lateral input[type="submit"]{
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-left: 1px solid #cccccc;
+    color: #555 ;
+    padding-left: 5px;
+}
+
+.aside-box {
+    width: 85%;
+    height: 240px;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-top: 2px;
+    border: 1px solid black;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f;
+    
+}
+
+
+#login input[type="email"],
+#login input[type="password"] {
+display: block;
+margin: 0px auto;
+margin-top: 20px;
+width: 90%;
+height: 30px;
+border: 1px solid #ccc;
+box-shadow: 1px 1px 1px #ccc inset;
+border-radius: 5px;
+padding-left: 25px;
+}
+
+
+#login input[type="email"]:focus,
+#login input[type="password"]:focus {
+    color:#555;
+    box-shadow: 1px 1px 1px grey inset;
+}
+
+
+.iconos-chicos-uno {
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.iconos-chicos-dos {
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 30px;
+}
+/**botones entrar y limpiar**/
+#login input[type="submit"],
+#login input[type="button"],
+#login input[type="reset"],
+#login button {
+     
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
+border: 1px solid #156785;
+border-radius: 0px;
+cursor: pointer;
+font-size: 15px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+margin-left: 20px;
+margin-bottom: 20px;
+
+}
+
+#login input[type="submit"]:hover,
+#login input[type="button"]:hover,
+#login input[type="reset"]:hover,
+#login button:hover { 
+    box-shadow: 0px 0px 3px gray;
+}
+
+#login a {
+    display: block;
+    font-size: 14;
+    text-decoration: none;
+    margin-left: 18px;
+    color: #555555;
+     
+}
+
+#login a:hover {
+    
+    color: #3697b4 ;
+     
+}
+
+ #social  {
+     display: block;
+     color: #333333;
+     text-decoration: none;
+     font-size: 39px;
+     margin-left: 20px;
+     margin-bottom: 20px;
+      
+
+ }
+
+
+ /**articulos**/
+
+ #articles {
+     width: 860px;
+     float: left;
+ }
+
+ #articles h2 {
+     display: block;
+     width: 100%;
+     height: 75px;
+     line-height: 75px;
+     text-align: center;
+     font-family: "BebasNeue";
+     font-size: 40px;
+     font-weight: normal;
+     letter-spacing: 2px;
+     background: url(img/pxgray.png), white;
+     margin: 0px auto;
+     margin-top: 20px;
+     margin-bottom: 15px;
+ }
+
+ #articles article {
+     width: 95%;
+     height: auto;
+     border: 1px solid #ccc;
+     margin: 40px auto;
+     padding: 10px;
+     font-family: "TrebouchetMS";
+     background: white;
+     color: black;
+     box-shadow: 1px 1px 2px solid #ddd ;
+ }
+
+
+ #articles article h4 {
+     display: block;
+     font-size: 23px;
+     margin: 3px;
+
+ }
+
+
+ #articles article h4 a {
+     text-decoration: none;
+     color: #00538c;
+ }
+
+ #articles article h4 a:hover {
+    text-decoration: underline;
+}
+
+#articles .data {
+    float: right;
+    background: #393d3f;
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+#articles article p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#blog {
+    height: 100px;
+    margin-top: 60px;
+    line-height: 100px;
+    text-align: center;
+ 
+   
+}
+
+#blog a {
+  display: block; /**para que toda la caja sea clickeable**/
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: "Bebasneue";
+    color: #00538c;
+    text-decoration: none;
+     
+     
+}
+
+#blog:hover {
+    border: 10px solid #37bcf9;
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px gray;
+    transition: all 1s;
+    animation: blink 10s infinite linear;
+}
+
+@keyframes blink {
+0% {
+    border: 10px solid #37bcf9;
+}
+25% {
+    border: 10px solid green;
+}
+50% {
+    border: 10px solid yellow;
+}
+75% {
+    border: 10px solid blue;
+}
+100% {
+    border: 10px solid #37bcf9;
+}
+}
+
+
+/*footer*/
+#footer {
+    width: 100%;
+    height: 470px;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+/** > significa los primeros hijos del footer **/
+#footer .wrap  > div {
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: white;
+    font-family: "trebuchetms";
+}
+
+#footer a {
+    text-decoration: none;
+    color: #37bcf9;
+    transition: all 300ms;
+
+}
+
+#footer h5 {
+display: block;
+background: url(img/pxgray.png), white;
+height: 50px;
+letter-spacing: 2px;
+text-align: center;
+font-family: "bebasneue";
+font-size: 40px;
+line-height: 55px;
+color: black;
+margin-bottom: 15px;
+}
+
+#footer ul {
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#footer ul li {
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+#footer ul li a {
+    display: block;
+    height: 40px;
+
+    
+}
+
+#footer  iframe {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 5px solid grey;
+}
+
+#footer img {
+    margin-bottom: 15px;
+    
+}
+
+#footer #browsers img {
+    width: 45px;
+}
+
+/**ANIMACIONES**/
+
+.logo:hover {
+    background-color: red;
+}
+
+@keyframes rotate-gear {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+.animacion {
+    animation-name: rotate-gear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
